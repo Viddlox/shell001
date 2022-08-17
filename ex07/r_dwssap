@@ -1,9 +1,0 @@
-cat /etc/passwd | grep -v "#" | awk 'NR % 2 == 0 {print $0}'
-
-cat /etc/passwd \
-| grep -v "#" \
-| awk 'NR % 2 == 0' \
-| rev \
-| sort -fnr \
-| tr '\n' ','
-| sed -n -e "$FT_LINE1,${FT_LINE2}p"
